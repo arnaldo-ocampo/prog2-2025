@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cuentas;
+package py.edu.fiuni.cuentas;
+
+import py.edu.fiuni.cuentas.Cliente;
 
 /**
  *
