@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package py.edu.fiuni.cuentas;
+package py.edu.fiuni.cuentas.controlador;
 
 import java.util.ArrayList;
+import py.edu.fiuni.cuentas.modelo.Banco;
+import py.edu.fiuni.cuentas.modelo.Cuenta;
+
 
 /**
  *
@@ -17,6 +20,7 @@ public class ControladorCuenta {
 
     public ControladorCuenta() {
         //this.cuentas = new ArrayList();
+        //Banco b = new Banco();
     }
 
     /**

@@ -5,7 +5,10 @@
  */
 package py.edu.fiuni.cuentas;
 
-import py.edu.fiuni.cuentas.Cliente;
+import py.edu.fiuni.cuentas.modelo.Cuenta;
+import py.edu.fiuni.cuentas.modelo.Banco;
+import py.edu.fiuni.cuentas.vista.ClienteCLI;
+
 
 /**
  *
@@ -14,23 +17,25 @@ import py.edu.fiuni.cuentas.Cliente;
 public class Cuentas {
 
     
-    public static void modificarParam(final Cuenta c){
+    /*public static void modificarParam(final Cuenta c){
         c.setNumero(34); // = new Cuenta();
-    }
+    }*/
     
     public static void main(String[] args) {
 
+        ClienteCLI clienteCLI = new ClienteCLI();
+        clienteCLI.ejecutar();
+        
+        
         //String saludo = "hola";
         //modificarParam(saludo);
         //System.out.println(saludo);
         
-        int numero = 4;
+        /*int numero = 4;
         int x = numero;
         numero = 9;
         
         System.out.println(x);
-        
-        
         
         Banco banco = new Banco();
         final Cliente c1 = new Cliente("Steve Jobs", 67, 1000, "steve@apple.com");
@@ -45,7 +50,7 @@ public class Cuentas {
         
         modificarParam(cuenta1);
         
-        System.out.println(cuenta1);
+        System.out.println(cuenta1);*/
         /*System.out.println(cuenta2);
         
         int a = 100000;

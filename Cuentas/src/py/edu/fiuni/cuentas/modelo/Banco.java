@@ -1,4 +1,4 @@
-package py.edu.fiuni.cuentas;
+package py.edu.fiuni.cuentas.modelo;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
