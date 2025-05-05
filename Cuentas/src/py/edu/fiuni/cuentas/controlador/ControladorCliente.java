@@ -7,6 +7,7 @@ package py.edu.fiuni.cuentas.controlador;
 
 import java.util.ArrayList;
 import py.edu.fiuni.cuentas.modelo.Cliente;
+import py.edu.fiuni.cuentas.repositorio.RepositorioCliente;
 
 /**
  *
@@ -14,29 +15,27 @@ import py.edu.fiuni.cuentas.modelo.Cliente;
  */
 public class ControladorCliente {
     
-    private static ArrayList<Cliente> clientes = new ArrayList();
-
+    private RepositorioCliente repo = new RepositorioCliente();
+    
+    
     public int getCantidadCliente(){
-        return this.clientes.size();
+        return this.repo.getCantidadCliente();
     }
     
     public void guardarCliente(Cliente cliente){
-        this.clientes.add(cliente);
+        
+        this.repo.guardar(cliente);
     }
     
     public Cliente obtenerClientePorCI(int ci){
+           
+        return this.repo.obtenerClientePorCI(ci);
         
-        /*for(int i = 0; i < this.clientes.size(); i++){
-            Cliente temp = this.clientes.get(i);
-            if(temp.getNroDocumento() == ci){
-                return temp;
-            }
-        }*/       
-        for(Cliente c : this.clientes){
+        /*for(Cliente c : this.repo.obtenerClientes()){
             if(c.getNroDocumento() == ci){
                 return c;
             }
         }       
-        return null;        
+        return null;*/        
     }
 }

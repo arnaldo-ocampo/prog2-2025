@@ -11,23 +11,35 @@ package py.edu.fiuni.cuentas.modelo;
  *
  * @author Arnaldo
  */
-public class Banco {
+public class Banco implements Comparable<Banco> {
     
+    private int codigo = 0;
     private String nombre = null;
     private String direccion = null;
     private String correo = null;
     private String telefono = null;
     
     public Banco (){
-        this("", "", "", "");
+        this(0, "", "", "", "");
     }
     
-    public Banco(String nombre, String direcc, String correo, String telef){
+    public Banco(int codigo, String nombre, String direcc, String correo, String telef){
+        this.codigo = codigo;
         this.nombre =  nombre;
         this.direccion = direcc;
         this.correo = correo;
         this.telefono = telef;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -59,5 +71,26 @@ public class Banco {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
-    }    
+    } 
+    
+    public String toString(){
+        return "[" + codigo + "] : " + nombre; 
+    }
+    
+    
+    @Override
+    public int compareTo(Banco b){
+        //return b.nombre.compareTo(this.nombre);
+        
+        /*if(this.codigo == b.codigo){
+            return 0;
+        }        
+        if(this.codigo < b.codigo){
+            return -1;
+        }        
+        return 1;
+        */
+        //return codigo == b.codigo ? 0 : (codigo < b.codigo ? -1 : 1);
+        return codigo - b.codigo;
+    }
 }
